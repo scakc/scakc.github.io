@@ -2,12 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>3D Cube</title>
+    <title>SCAKC</title>
     <link  rel="stylesheet" type="text/css" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.1/angular-animate.min.js"></script>
+    <script src="main.js"></script>
   </head>
-  <body>
-    <div class="bodyinside">
+  <body ng-app="MyPage">
+    <div class="bodyinside" ng-controller="FrameController">
 
 
       <div class="container">
@@ -17,25 +21,110 @@
               <li >
                 <img src="images/dp.jpg" />
               </li>
-              <li><a class="active" href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Interests</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">About</a></li>
+              <li><a ng-class="name=='home'?'active':''" href="#" ng-click="tabClicked('home')">Home</a></li>
+              <li><a ng-class="name=='projects'?'active':''" href="#" ng-click="tabClicked('projects')">Projects</a></li>
+              <li><a ng-class="name=='skills'?'active':''" href="#" ng-click="tabClicked('skills')">Skills</a></li>
+              <li><a ng-class="name=='about'?'active':''" href="#" ng-click="tabClicked('about')">About</a></li>
             </ul>
           </div>
-          <div class="col-md-9 rightPane">
-            <br><br><br>
+          <div class="col-md-9 rightPane {{name}} animate-if" ng-if='name=="home"' >
+
+            <div id = "cube-anim">
+              <h2>3D CUBE</h2>
               <div id="container">
-              <div id="cube" class="animate">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="cube" class="animate">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="projects"'>
+            <br><br><br>
+            <h2>PROJECTS</h2>
+            <div class='row'>
+              <div class='column-3' ng-click='openPage("http://scakc.github.io")'>
+                <img src="images/pro-1.jpg" />
+                <p>
+                  My personal Website. This website i have build using AngularJS really great plugin.
+                </p>
+              </div>
+              <div class='column-3' ng-click='openPage("http://www.vasitars.com")'>
+                <img src="images/pro-2.jpg" />
+                <p>
+                  A website developed by me using html, css, JS,jQuery and PHP for a startup company.
+                </p>
+              </div>
+              <div class='column-3' ng-click='openPage("http://slideme.org/application/guess-it-0")'>
+                <img src="images/pro-3.jpg" />
+                <p>
+                  An android game for guessing the names of movies. Multiplayer game.
+                </p>
+              </div>
+              <div class='column-3' ng-click='openPage("http://www.iitbbs.ac.in/news.php?id=375")'>
+                <img src="images/pro-4.jpg" />
+                <p>
+                  Designed and manufactured off-road vehicle BAJA. Buddha International Circuit Noida.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="skills"'>
+            <br><br><br>
+            <h2>SKILLS</h2>
+
+            <div class='skillContainer'>
+
+              <ul class='leftskills'>
+                <li>Html<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.html}}></div></div> {{' ('+ completetion.html*100 + '%)'}}</li>
+                <li>CSS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.css}}></div></div> {{' ('+ completetion.css*100 + '%)'}}</li>
+                <li>JS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.js}}></div></div> {{' ('+ completetion.js*100 + '%)'}}</li>
+                <li>jQuery<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.jquery}}></div></div> {{' ('+ completetion.jquery*100 + '%)'}}</li>
+                <li>Bootstrap<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.bootstrap}}></div></div> {{' ('+ completetion.bootstrap*100 + '%)'}}</li>
+                <li>Android Studio<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.android}}></div></div> {{' ('+ completetion.android*100 + '%)'}}</li>
+                <li>JAVA<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.java}}></div></div> {{' ('+ completetion.java*100 + '%)'}}</li>
+                <li>C<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.c}}></div></div> {{' ('+ completetion.c*100 + '%)'}}</li>
+                <li>Python<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.python}}></div></div> {{' ('+ completetion.python*100 + '%)'}}</li>
+                <li>Git/GitHub<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.git}}></div></div> {{' ('+ completetion.git*100 + '%)'}}</li>
+              </ul>
+
+              <ul class="rightskills">
+                <li>AngularJS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ng}}></div></div> {{' ('+ completetion.ng*100 + '%)'}}</li>
+                <li>SQL<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.sql}}></div></div> {{' ('+ completetion.sql*100 + '%)'}}</li>
+                <li>AJAX<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ajax}}></div></div> {{' ('+ completetion.ajax*100 + '%)'}}</li>
+                <li>MATLAB<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.matlab}}></div></div> {{' ('+ completetion.matlab*100 + '%)'}}</li>
+                <li>Data Analysis<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.da}}></div></div> {{' ('+ completetion.da*100 + '%)'}}</li>
+                <li>Machine Learning<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ml}}></div></div> {{' ('+ completetion.ml*100 + '%)'}}</li>
+                <li>Artificial Intelligence<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ai}}></div></div> {{' ('+ completetion.ai*100 + '%)'}}</li>
+                <li>FEM<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.fem}}></div></div> {{' ('+ completetion.fem*100 + '%)'}}</li>
+                <li>CFD<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.cfd}}></div></div> {{' ('+ completetion.cfd*100 + '%)'}}</li>
+                <li>NodeJs<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.nodejs}}></div></div> {{' ('+ completetion.nodejs*100 + '%)'}}</li>
+              </ul>
+
+            </div>
+
+
+
+          </div>
+
+          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="about"'>
+            <br><br><br>
+            <h2 style="color:#F0FFF0">About Me</h2>
+
+            <h4>Hi, I am Abhishek Kumar. </h4>
+            <h4>I know web development so i created my personal website using html, css, jquery, angularJS, andd... that's it.</h4>
+            <h4>I am a very curious person i have many interests, some of them are very diverse fields. I like things going dynamically and i believe what you learn will help you in some or other point of your life. I want to achieve some thing great and want to contribute to this society as far as i can, and bring better lifestyle for everyone .Being a little selfish i want everyone to know my name throughout this world.
+                Thank you very much for showing interest in my profile. </h4>
+            <h4 style="color:navy">"Hard work beats talent, when talent doesn't work hard".</h4>
+            <br />
           </div>
         </div>
       </div>
