@@ -115,6 +115,7 @@ body {
   opacity: 0.9;
   background-position:center center;
   font: inherit;
+  filter: grayscale(100%);
 }
 
 #cube div:nth-child(1) {
