@@ -305,8 +305,7 @@ h2{
 }
 
 .home{
-
-background:radial-gradient(#222  ,#222 );
+background-image: url('images/hback.jpg');
 background-attachment: fixed;
 background-position: center;
 color: white;
@@ -314,7 +313,7 @@ color: white;
 
 .projects{
   /*farthest-corner at 45px 45px , #2D3A4D 0%, #0000FF 100%*/
-  background:radial-gradient(#2D3A4D ,#373737);
+  background:radial-gradient(#2D3A4D ,#2D3A4D);
   background-attachment: fixed;
   background-position: center;
   color: white;
@@ -370,10 +369,11 @@ color: white;
 
 
 .about{
-  background:radial-gradient(#20B2AA ,#20B2AA);
+background-image: url('images/aback.jpg');
   background-attachment: fixed;
   background-position: center;
-  color: white;
+  font-family:sans-serif;
+  color: #aeaeae;
 }
 
 
