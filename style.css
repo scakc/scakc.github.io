@@ -116,6 +116,7 @@ body {
   background-position:center center;
   font: inherit;
   filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 #cube div:nth-child(1) {
@@ -327,7 +328,7 @@ color: white;
 
 
 .skills{
-  background:radial-gradient(#00FA9A ,#00FA9A);
+  background:radial-gradient(#708090 ,#708090);
   background-attachment: fixed;
   background-position: center;
   color: white;
@@ -335,7 +336,7 @@ color: white;
 
 .skills li{
     display: block;
-    color: navy;
+    
     padding: none;
     text-decoration: none;
     height:20%;
