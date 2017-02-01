@@ -210,6 +210,11 @@ body {
   font: inherit;
   overflow-y: scroll;
   overflow-x: hidden;
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -o-transform-style      : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
 }
 
 .rightPane::-webkit-scrollbar-track
@@ -280,22 +285,28 @@ body {
 }
 /* du début de l'entrée */
  .animate-if.ng-enter {
-    clip-path: circle(60px at center);
+
+   transform: rotateY(300deg) rotateX(30deg) rotateZ(30deg) translateX(40vw) translateY(50vh) scale(0,0);
+    clip-path: circle(0px at center);
     opacity: 1;
+
 }
 /* à la fin de l'entrée */
  .animate-if.ng-enter.ng-enter-active {
-    clip-path: circle(900px at center);
     opacity:1;
+    clip-path: circle(50vw at center);
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(0vw) translateY(0vh) scale(1,1);
 }
 /* du début de la sortie */
  .animate-if.ng-leave {
     opacity:1;
-    clip-path: circle(900px at center);
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateX(0vw) translateY(0vh) scale(1,1);
+
 }
 /* à la fin de la sortie */
  .animate-if.ng-leave.ng-leave-active {
-    opacity:0;
+    opacity:1;
+    transform: rotateY(300deg) rotateX(30deg) rotateZ(30deg) translateX(-40vw) translateY(-50vh) scale(0,0);
 }
 
 h2{
@@ -335,7 +346,7 @@ color: white;
 }
 
 .skills li{
-    display: block;  
+    display: block;
     padding: none;
     text-decoration: none;
     height:20%;
