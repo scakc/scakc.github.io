@@ -1,133 +1,324 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>SCAKC</title>
-    <link  rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="https://code.angularjs.org/1.6.1/angular-animate.min.js"></script>
-    <script src="main.js"></script>
-  </head>
-  <body ng-app="MyPage">
-    <div class="bodyinside" ng-controller="FrameController">
+<head>
+	<title>scakc github website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="plugin/jquery.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<base target="_blank">
+</head>
+<body link="#C0C0C0" vlink="#808080" alink="#FF0000">
 
 
-      <div class="container">
-        <div class="row">
-          <div class="leftPane col-md-3">
-            <ul>
-              <li >
-                <img src="images/dp.jpg" />
-              </li>
-              <li><a ng-class="name=='home'?'active':''" href="#" ng-click="tabClicked('home')">Home</a></li>
-              <li><a ng-class="name=='projects'?'active':''" href="#" ng-click="tabClicked('projects')">Projects</a></li>
-              <li><a ng-class="name=='skills'?'active':''" href="#" ng-click="tabClicked('skills')">Skills</a></li>
-              <li><a ng-class="name=='about'?'active':''" href="#" ng-click="tabClicked('about')">About</a></li>
-            </ul>
-          </div>
-          <div class="col-md-9 rightPane {{name}} animate-if" ng-if='name=="home"' >
+	
+	<div class="normal">
+		<header class = "header">
+			<div class="myphoto"><img src="images/dp.jpg"></div>
+			<div class="shape"></div>
+			<div class="myname">ABHISHEK KUMAR</div>
+			<div class="shape"></div>
+			<div class="links">
+				<a href="https://github.com/scakc"><button>Github Page</button></a>
+				<a href="http://nongeneraltech.blogspot.com/"><button>Blog</button></a>
+			</div>
+		</header>
+		<div class = "details">
+			<div class = "panel">
+				<div class="container">
+					<div class="pl">G</div>
+					<button class="backbtn">back</button>
+				</div>
+			</div>
+			<div class = "info">
+				<div class="container">
+					<div class="pname">
+						Project Name
+					</div>
+					</br>
+					<div class="pimg">
+						<img src="images/pro-1.jpg">
+						<p>
+							Some details about this pproject and some useful information that you might want to put on this website about this project so basically write anything you feel important relatted to this project.
+						</p>
+					</div>
+					<div class="others">
+						Some other details and links on project.</br>
+						<a href = "http://www.github.com/">Project Link</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class = "centertext">
+				This is my github website i developed this website to showcase my projects in a more detailed way.</br> Please click on the project to know more information about it and its use.
+			</div>
+			<div class="projects">
+				<div class="banner"><p>Projects</p></div>
+				<div>
+					<table>
+						<tr>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>M</p>
+											<div>
+												ML Book
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-5.jpg"></div>
+									<div class="text">A Ipython series on machine learning concepts.</div>
+									<div class="loader">
+										<div class="pname">
+											Github Website
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-5.jpg">
+											<p>
+												Its a series of ipython jupyter notebooks on basic understanding of machine learning concepts. The series is based on a deep learning online book which includes details about probabilty, gradient descent, bayes method, pca, svm and other machine learning concepts.
+											</p>
+										</div>
+										<div class="others">
+											The files can be found on github on below given link.</br>
+											<a href = "https://github.com/scakc/Understanding-Machine-Learning">Series Link</a>
+										</div>
+									</div>
 
-            <div id = "cube-anim">
-              <h2>3D CUBE</h2>
-              <div id="container">
-                <div id="cube" class="animate">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
-          </div>
+								</div>  <!-- ml book -->
+							</td>
+							
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>V</p>
+											<div>
+												Vasitars
+											</div>
+										</center>
+									</div>	
+									<div class="image"><img src="images/pro-2.jpg"></div>
+									<div class="text">A website for a composite material products startup.</div>
+									<div class="loader">
+										<div class="pname">
+											Vasitars
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-2.jpg">
+											<p>
+												This is a website i developed for a startup named Vasitars specializing in composite material products. Its a responsive website that has been developed using basic knowledge html, css, javascript, jquery. The website has been hosted on github.
+											</p>
+										</div>
+										<div class="others">
+											The website link is given below:</br>
+											<a href = "https://www.vasitars.com">Vasitars</a>
+										</div>
+									</div>
+								</div>  <!-- vasitars -->
+							</td>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>S</p>
+											<div>
+												SciCalcX
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-7.jpg"></div>
+									<div class="text">An Android advanced calculator app.
+									</div>
+									<div class="loader">
+										<div class="pname">
+											Nptel Course Tracker
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-7.jpg">
+											<p>
+												An advanced calculator app with following features:</br></br>
+												Mathematical Display,
+												Complex number System,
+												Advanced Matrix operation,
+												Linear System of Equation Solver,
+												4 Number Bases,
+												Partical Swarm solver,
+												Scientific Constants,
+												Linear Regression,
+												Conversions,
+												Integration,
+												Differentiation,
+												Permutations and Combinations,
+												Variables Storage,
+												Statistics,
+												Trigonometry,
+												Hyperbolic function,
+												Random number Generator,
+												Precision control,
+												Calculation History Display,
+												Calculation History Picker,
+												Stylish Display,
+												Help Manual,
+												Touch Vibration, 
+												Dark/Light Theme, etc.
+											</p>
+										</div>
+										<div class="others">
+											The app can be found on playstore:.</br>
+											<a href = "https://play.google.com/store/apps/details?id=com.scakc.calku">Play Store Link</a>
+										</div>
+									</div>
 
-          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="projects"'>
-            <br><br><br>
-            <h2>PROJECTS</h2>
-            <div class='row'>
-              <div class='column-3' ng-click='openPage("http://scakc.github.io")'>
-                <img src="images/pro-1.jpg" />
-                <p>
-                  My personal Website. This website i have build using AngularJS really great plugin.
-                </p>
-              </div>
-              <div class='column-3' ng-click='openPage("http://www.vasitars.com")'>
-                <img src="images/pro-2.jpg" />
-                <p>
-                  A website developed by me using html, css, JS,jQuery and PHP for a startup company.
-                </p>
-              </div>
-              <div class='column-3' ng-click='openPage("http://slideme.org/application/guess-it-0")'>
-                <img src="images/pro-3.jpg" />
-                <p>
-                  An android game for guessing the names of movies. Multiplayer game.
-                </p>
-              </div>
-              <div class='column-3' ng-click='openPage("http://www.iitbbs.ac.in/news.php?id=375")'>
-                <img src="images/pro-4.jpg" />
-                <p>
-                  Designed and manufactured off-road vehicle BAJA. Buddha International Circuit Noida.
-                </p>
-              </div>
-            </div>
+								</div>  <!-- scicalcx -->
+							</td>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>K</p>
+											<div>
+												Knocksoniacs
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-4.jpg"></div>
+									<div class="text">An offroad vehicle for BAJA SAE India competetion.</div>
+									<div class="loader">
+										<div class="pname">
+											Knocksoniacs
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-4.jpg">
+											<p>
+											This is the first offroad vehicle developed for BAJA SAE India 2016 competetion held in Buddha International Circuit, Noida from 21st Jan to 26th Jan. The team was comprised of 9 students and was named Knocksoniacs. More details on competetion can be found on BAJA SAE India Website. My part in the team to design the suspension.
+											</p>
+										</div>
+										<div class="others">
+											For more information click below:</br>
+											<a href = "http://www.iitbbs.ac.in/news.php?id=375">Team Knocksoniacs</a>
+										</div>
+									</div>
+								</div>  <!-- baja sae india -->
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>G</p>
+											<div>
+												Github Website
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-1.jpg"></div>
+									<div class="text">A website on github to demonsrate projects.</div>
+									<div class="loader">
+										<div class="pname">
+											Github Website
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-1.jpg">
+											<p>
+												This is a website i developed to showcase my projects. Its a responsive website that has been developed using basic knowledge html, css, javascript, jquery. The website has been hosted on github.
+											</p>
+										</div>
+										<div class="others">
+											The code for this website can be found on github on below given link.</br>
+											<a href = "https://github.com/scakc/scakc.github.io">Project Link</a>
+										</div>
+									</div>
 
-          </div>
+								</div>  <!-- github site -->
+							</td>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>N</p>
+											<div>
+												Nptel Course Tracker
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-6.jpg"></div>
+									<div class="text">A chrome extension for nptel course progress tracking.</div>
+									<div class="loader">
+										<div class="pname">
+											Nptel Course Tracker
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-6.jpg">
+											<p>
+												It is a chrome extension code developed in javascript based on injection method to keep track of your progress of nptel course you are studying. You can add, remove, reset courses.
+											</p>
+										</div>
+										<div class="others">
+											The project code can be found on github on below given link.</br>
+											<a href = "https://github.com/scakc/Nptel-Course-Tracker-Chrome-Extension">Project Link</a>
+										</div>
+									</div>
 
+								</div>  <!-- nct -->
+							</td>
+							<td>
+								<div class = "data">
+									<div class = "mask">
+										<center>
+											<p>G</p>
+											<div>
+												Guess It
+											</div>
+										</center>
+									</div>
+									<div class="image"><img src="images/pro-3.jpg"></div>
+									<div class="text">A very basic and simple android game.</div>
+									<div class="loader">
+										<div class="pname">
+											Guess IT
+										</div>
+										</br>
+										<div class="pimg">
+											<img src="images/pro-3.jpg">
+											<p>
+												A very simple and basic android game developed using android studio.</br>
+												***In this game two players are required***
 
-          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="skills"'>
-            <br><br><br>
-            <h2>SKILLS</h2>
+												1. First player will think of a name of movie.</br>
+												2. He will type the name of movie.</br>
+												3. All words will be hidden except the ones that First player chooses to be displayed.</br>
+												4. Next he sets the number of times the second player can do mistakes in guessing weather a letter is there or not in the name of the movie and sets the time limit under which he has to get the movie name.</br>
+												5. If Second player gets it correct before he run out of chances and time left he wins.</br>
+												6. Other wise first player wins.</br>
+											</p>
+										</div>
+										<div class="others">
+											The Game link is given below:</br>
+											<a href = "http://slideme.org/application/guess-it-0">App Download</a>
+										</div>
+									</div>
+								</div>  <!-- guess it android game -->
+							</td>
 
-            <div class='skillContainer'>
+						</tr>
 
-              <ul class='leftskills'>
-                <li>Html<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.html}}></div></div> {{' ('+ completetion.html*100 + '%)'}}</li>
-                <li>CSS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.css}}></div></div> {{' ('+ completetion.css*100 + '%)'}}</li>
-                <li>JS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.js}}></div></div> {{' ('+ completetion.js*100 + '%)'}}</li>
-                <li>jQuery<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.jquery}}></div></div> {{' ('+ completetion.jquery*100 + '%)'}}</li>
-                <li>Bootstrap<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.bootstrap}}></div></div> {{' ('+ completetion.bootstrap*100 + '%)'}}</li>
-                <li>Android Studio<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.android}}></div></div> {{' ('+ completetion.android*100 + '%)'}}</li>
-                <li>JAVA<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.java}}></div></div> {{' ('+ completetion.java*100 + '%)'}}</li>
-                <li>C<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.c}}></div></div> {{' ('+ completetion.c*100 + '%)'}}</li>
-                <li>Python<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.python}}></div></div> {{' ('+ completetion.python*100 + '%)'}}</li>
-                <li>Git/GitHub<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.git}}></div></div> {{' ('+ completetion.git*100 + '%)'}}</li>
-              </ul>
-
-              <ul class="rightskills">
-                <li>AngularJS<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ng}}></div></div> {{' ('+ completetion.ng*100 + '%)'}}</li>
-                <li>SQL<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.sql}}></div></div> {{' ('+ completetion.sql*100 + '%)'}}</li>
-                <li>AJAX<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ajax}}></div></div> {{' ('+ completetion.ajax*100 + '%)'}}</li>
-                <li>MATLAB<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.matlab}}></div></div> {{' ('+ completetion.matlab*100 + '%)'}}</li>
-                <li>Data Analysis<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.da}}></div></div> {{' ('+ completetion.da*100 + '%)'}}</li>
-                <li>Machine Learning<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ml}}></div></div> {{' ('+ completetion.ml*100 + '%)'}}</li>
-                <li>Artificial Intelligence<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.ai}}></div></div> {{' ('+ completetion.ai*100 + '%)'}}</li>
-                <li>FEM<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.fem}}></div></div> {{' ('+ completetion.fem*100 + '%)'}}</li>
-                <li>CFD<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.cfd}}></div></div> {{' ('+ completetion.cfd*100 + '%)'}}</li>
-                <li>NodeJs<div id = 'meter' ><div class='meter-inner' ng-style={{skillStyle.nodejs}}></div></div> {{' ('+ completetion.nodejs*100 + '%)'}}</li>
-              </ul>
-
-            </div>
-
-
-
-          </div>
-
-          <div class='col-md-9 rightPane {{name}} animate-if' ng-if='name=="about"'>
-            <br><br><br>
-            <h2 style="color:#F0FFF0">About Me</h2>
-
-            <h4>Hi, I am Abhishek Kumar. </h4>
-            <h4>I know web development so i created my personal website using html, css, jquery, angularJS, andd... that's it.</h4>
-            <h4>I am a very curious person i have many interests, some of them are very diverse fields. I like things going dynamically and i believe what you learn will help you in some or other point of your life. I want to achieve some thing great and want to contribute to this society as far as i can, and bring better lifestyle for everyone .Being a little selfish i want everyone to know my name throughout this world.
-                Thank you very much for showing interest in my profile. </h4>
-            <h4 style="color:#aeaeae">"Hard work beats talent, when talent doesn't work hard".</h4>
-            <br />
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+					</table>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="footer">
+				<center>Copyright &#169 2018 scakc github. All rights reserved.</center>
+			</div>
+		</footer>
+	</div>
+</body>
 </html>
