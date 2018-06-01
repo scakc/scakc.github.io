@@ -22,8 +22,21 @@ $(document).ready(function(){
         $(".info").css("margin-left", "100vw");
         $(".info").find(".container").css("margin-left", "113vw");
         $(".info").find(".container").find(".pimg").find("p").css("margin-top", "-102vw");
+        $(".info").find(".container").css("background-color", "#000");
         $(".info").find(".container").find(".others").css("margin-left", "100vw");
     });
 
+    $(".myphoto").click(function(){
+        $(".info").find(".container").html($(this).find(".loader").html());
+        $(".header").css("border-bottom-color", "#ddd");
+        $(".shape").css("background-color", "#ddd");
+        $(".panel").css("margin-left", "0vw");
+        $(".info").css("margin-left", "15vw");
+        $(".info").find(".container").css("background-color", "#eee");
+        $(".info").find(".container").css("margin-left", "3vw");
+        $(".info").find(".container").find(".pimg").find("p").css("margin-top", "2vw");
+        $(".info").find(".container").find(".others").css("margin-left", "0vw");
+        $(".pname").text($(this).find(".mask").find("div").text() + "");
+    });
 
 });
