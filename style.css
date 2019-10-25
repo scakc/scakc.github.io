@@ -277,3 +277,32 @@ body{
 	width: 100%;
 	height: 100%;
 }
+
+.resume{
+	float: right;
+	width : 6vw;
+	height: 7vw;
+	margin-right: 0;
+	background: #0e0e0e;
+	border-radius: 0vw 1vw 1vw 1vw;
+	border: 0.4vw solid #000;
+}
+
+.resume .mask{
+	position: absolute;
+	width: 6vw;
+	height:5vw;
+	opacity: 0;
+	transition-duration: .5s;
+}
+
+.resume .text{
+	position: relative;
+	color: #777;
+	padding: 0.2vw;
+}
+
+.resume embed{
+	z-index: 0;
+	width: 100vw;
+}
