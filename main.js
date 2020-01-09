@@ -4,6 +4,7 @@ $(document).ready(function(){
     $(".data").click(function(){
         $(".info").find(".container").html($(this).find(".loader").html());
         $(".header").css("border-bottom-color", "#ddd");
+        $(".myphoto").find("img").css("background-color", "#ddd");
         $(".shape").css("background-color", "#ddd");
         $(".panel").css("margin-left", "0vw");
         $(".info").css("margin-left", "15vw");
@@ -18,6 +19,7 @@ $(document).ready(function(){
     $(".backbtn").click(function(){
         $(".header").css("border-bottom-color", "#111");
         $(".shape").css("background-color", "#111");
+        $(".myphoto").find("img").css("background-color", "#000");
         $(".panel").css("margin-left", "-17vw");
         $(".info").css("margin-left", "100vw");
         $(".info").find(".container").css("margin-left", "113vw");
@@ -28,6 +30,7 @@ $(document).ready(function(){
 
     $(".myphoto").click(function(){
         $(".info").find(".container").html($(this).find(".loader").html());
+        $(".myphoto").find("img").css("background-color", "#ddd");
         $(".header").css("border-bottom-color", "#ddd");
         $(".shape").css("background-color", "#ddd");
         $(".panel").css("margin-left", "0vw");
